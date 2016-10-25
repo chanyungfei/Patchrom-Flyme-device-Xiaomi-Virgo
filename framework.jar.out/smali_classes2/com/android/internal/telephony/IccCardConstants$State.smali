@@ -218,6 +218,97 @@
     return-void
 .end method
 
+.method public static intToState(I)Lcom/android/internal/telephony/IccCardConstants$State;
+    .locals 1
+    .param p0, "state"    # I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/IllegalArgumentException;
+        }
+    .end annotation
+
+    .prologue
+    .line 90
+    packed-switch p0, :pswitch_data_0
+
+    .line 101
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw v0
+
+    .line 91
+    :pswitch_0
+    sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->UNKNOWN:Lcom/android/internal/telephony/IccCardConstants$State;
+
+    .line 99
+    :goto_0
+    return-object v0
+
+    .line 92
+    :pswitch_1
+    sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->ABSENT:Lcom/android/internal/telephony/IccCardConstants$State;
+
+    goto :goto_0
+
+    .line 93
+    :pswitch_2
+    sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->PIN_REQUIRED:Lcom/android/internal/telephony/IccCardConstants$State;
+
+    goto :goto_0
+
+    .line 94
+    :pswitch_3
+    sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->PUK_REQUIRED:Lcom/android/internal/telephony/IccCardConstants$State;
+
+    goto :goto_0
+
+    .line 95
+    :pswitch_4
+    sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->NETWORK_LOCKED:Lcom/android/internal/telephony/IccCardConstants$State;
+
+    goto :goto_0
+
+    .line 96
+    :pswitch_5
+    sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->READY:Lcom/android/internal/telephony/IccCardConstants$State;
+
+    goto :goto_0
+
+    .line 97
+    :pswitch_6
+    sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->NOT_READY:Lcom/android/internal/telephony/IccCardConstants$State;
+
+    goto :goto_0
+
+    .line 98
+    :pswitch_7
+    sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->PERM_DISABLED:Lcom/android/internal/telephony/IccCardConstants$State;
+
+    goto :goto_0
+
+    .line 99
+    :pswitch_8
+    sget-object v0, Lcom/android/internal/telephony/IccCardConstants$State;->CARD_IO_ERROR:Lcom/android/internal/telephony/IccCardConstants$State;
+
+    goto :goto_0
+
+    .line 90
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+        :pswitch_4
+        :pswitch_5
+        :pswitch_6
+        :pswitch_7
+        :pswitch_8
+    .end packed-switch
+.end method
+
 .method public static valueOf(Ljava/lang/String;)Lcom/android/internal/telephony/IccCardConstants$State;
     .locals 1
     .param p0, "name"    # Ljava/lang/String;
