@@ -1,0 +1,39 @@
+.method public phoneAccountSelected(Ljava/lang/String;Landroid/telecom/PhoneAccountHandle;)V
+    .locals 3
+
+    .prologue
+    .line 329
+    iget-object v0, p0, Lcom/android/server/telecom/InCallAdapter;->mCallIdMapper:Lcom/android/server/telecom/CallIdMapper;
+
+    invoke-virtual {v0, p1}, Lcom/android/server/telecom/CallIdMapper;->isValidCallId(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 330
+    invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
+
+    move-result-object v0
+
+    .line 331
+    iput-object p1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
+
+    .line 332
+    iput-object p2, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
+
+    .line 333
+    iget-object v1, p0, Lcom/android/server/telecom/InCallAdapter;->mHandler:Landroid/os/Handler;
+
+    const/16 v2, 0xd
+
+    invoke-virtual {v1, v2, v0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
+
+    .line 335
+    :cond_0
+    return-void
+.end method
