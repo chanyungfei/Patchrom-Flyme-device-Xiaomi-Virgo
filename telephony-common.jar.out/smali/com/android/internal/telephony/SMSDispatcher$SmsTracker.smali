@@ -57,6 +57,8 @@
 
 .field public final mSmsHeader:Lcom/android/internal/telephony/SmsHeader;
 
+.field private mSubId:I
+
 .field private mTimestamp:J
 
 .field private mUnsentPartCount:Ljava/util/concurrent/atomic/AtomicInteger;
