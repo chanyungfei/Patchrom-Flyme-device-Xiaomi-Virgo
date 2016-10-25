@@ -1,0 +1,143 @@
+.method private initSpecialPlatformSetting()V
+    .locals 4
+
+    .prologue
+    const/4 v3, 0x0
+
+    .line 136
+    iget-object v1, p0, Lcom/meizu/callsetting/MzBasicCallSetting;->mCfs:Lcom/meizu/callsetting/MzCallFeaturesSetting;
+
+    const-string v2, "category_basic_settings"
+
+    invoke-virtual {v1, v2}, Lcom/meizu/callsetting/MzCallFeaturesSetting;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/preference/PreferenceGroup;
+
+    #Yaphet.Chan 2016-09-06 Remove the incoming call flashlight. Begin
+
+    iget-object v1, p0, Lcom/meizu/callsetting/MzBasicCallSetting;->mIncomingFlashReminder:Lcom/meizu/common/preference/SwitchPreference;
+
+    invoke-virtual {v0, v1}, Landroid/preference/PreferenceGroup;->removePreference(Landroid/preference/Preference;)Z
+
+    #Yaphet.Chan 2016-09-06 Remove the incoming call flashlight. End
+
+    .line 138
+    .local v0, "basicCategory":Landroid/preference/PreferenceGroup;
+    iget-object v1, p0, Lcom/meizu/callsetting/MzBasicCallSetting;->mCfs:Lcom/meizu/callsetting/MzCallFeaturesSetting;
+
+    invoke-static {v1}, Lcom/meizu/callsetting/utils/MzFeatures;->FEATURE_SUPPORT_FLYME_WEBCALL(Landroid/content/Context;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 139
+    iget-object v1, p0, Lcom/meizu/callsetting/MzBasicCallSetting;->mFlymeSettings:Landroid/preference/PreferenceScreen;
+
+    if-eqz v1, :cond_0
+
+    .line 140
+    iget-object v1, p0, Lcom/meizu/callsetting/MzBasicCallSetting;->mFlymeSettings:Landroid/preference/PreferenceScreen;
+
+    invoke-virtual {v0, v1}, Landroid/preference/PreferenceGroup;->removePreference(Landroid/preference/Preference;)Z
+
+    .line 141
+    iput-object v3, p0, Lcom/meizu/callsetting/MzBasicCallSetting;->mFlymeSettings:Landroid/preference/PreferenceScreen;
+
+    .line 144
+    :cond_0
+    sget-boolean v1, Lcom/meizu/callsetting/utils/MzFeatures;->IS_CTA:Z
+
+    if-eqz v1, :cond_1
+
+    .line 145
+    iget-object v1, p0, Lcom/meizu/callsetting/MzBasicCallSetting;->mTogglePowerButtonEndsCallPreference:Lcom/meizu/common/preference/SwitchPreference;
+
+    invoke-virtual {v0, v1}, Landroid/preference/PreferenceGroup;->removePreference(Landroid/preference/Preference;)Z
+
+    .line 146
+    iput-object v3, p0, Lcom/meizu/callsetting/MzBasicCallSetting;->mTogglePowerButtonEndsCallPreference:Lcom/meizu/common/preference/SwitchPreference;
+
+    .line 148
+    :cond_1
+    sget-boolean v1, Lcom/meizu/callsetting/utils/MzFeatures;->FEATURE_SUPPORT_FLYME_AUTO_INDENTIFICAITON_NUMBER:Z
+
+    if-nez v1, :cond_2
+
+    iget-object v1, p0, Lcom/meizu/callsetting/MzBasicCallSetting;->mAutoIndentificationNumber:Lcom/meizu/common/preference/SwitchPreference;
+
+    if-eqz v1, :cond_2
+
+    .line 150
+    iget-object v1, p0, Lcom/meizu/callsetting/MzBasicCallSetting;->mAutoIndentificationNumber:Lcom/meizu/common/preference/SwitchPreference;
+
+    invoke-virtual {v0, v1}, Landroid/preference/PreferenceGroup;->removePreference(Landroid/preference/Preference;)Z
+
+    .line 151
+    iput-object v3, p0, Lcom/meizu/callsetting/MzBasicCallSetting;->mAutoIndentificationNumber:Lcom/meizu/common/preference/SwitchPreference;
+
+    .line 153
+    :cond_2
+    iget-object v1, p0, Lcom/meizu/callsetting/MzBasicCallSetting;->mCfs:Lcom/meizu/callsetting/MzCallFeaturesSetting;
+
+    invoke-static {v1}, Lcom/meizu/callsetting/utils/MzFeatures;->FEATURE_SUPPORT_HARASSMENT_BLOCKING(Landroid/content/Context;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    .line 154
+    if-eqz v0, :cond_3
+
+    .line 155
+    iget-object v1, p0, Lcom/meizu/callsetting/MzBasicCallSetting;->mSpamCallPref:Landroid/preference/Preference;
+
+    invoke-virtual {v0, v1}, Landroid/preference/PreferenceGroup;->removePreference(Landroid/preference/Preference;)Z
+
+    .line 156
+    iput-object v3, p0, Lcom/meizu/callsetting/MzBasicCallSetting;->mSpamCallPref:Landroid/preference/Preference;
+
+    .line 159
+    :cond_3
+    sget-boolean v1, Lcom/meizu/callsetting/utils/MzFeatures;->FEATURE_SUPPORT_SPECIAL_CUSTOM:Z
+
+    if-eqz v1, :cond_4
+
+    .line 160
+    iget-object v1, p0, Lcom/meizu/callsetting/MzBasicCallSetting;->mDelayAutoAnswer:Lcom/meizu/common/preference/SwitchPreference;
+
+    if-eqz v1, :cond_4
+
+    .line 161
+    iget-object v1, p0, Lcom/meizu/callsetting/MzBasicCallSetting;->mDelayAutoAnswer:Lcom/meizu/common/preference/SwitchPreference;
+
+    invoke-virtual {v0, v1}, Landroid/preference/PreferenceGroup;->removePreference(Landroid/preference/Preference;)Z
+
+    .line 162
+    iput-object v3, p0, Lcom/meizu/callsetting/MzBasicCallSetting;->mDelayAutoAnswer:Lcom/meizu/common/preference/SwitchPreference;
+
+    .line 172
+    :cond_4
+    sget-boolean v1, Lcom/meizu/callsetting/utils/MzFeatures;->FEATURE_COUNT_DOWN_TONE:Z
+
+    if-nez v1, :cond_5
+
+    .line 173
+    iget-object v1, p0, Lcom/meizu/callsetting/MzBasicCallSetting;->mCountDownPreference:Lcom/meizu/common/preference/SwitchPreference;
+
+    if-eqz v1, :cond_5
+
+    .line 174
+    iget-object v1, p0, Lcom/meizu/callsetting/MzBasicCallSetting;->mCountDownPreference:Lcom/meizu/common/preference/SwitchPreference;
+
+    invoke-virtual {v0, v1}, Landroid/preference/PreferenceGroup;->removePreference(Landroid/preference/Preference;)Z
+
+    .line 180
+    :cond_5
+    invoke-direct {p0, v0}, Lcom/meizu/callsetting/MzBasicCallSetting;->initFlymeTelecomSettings(Landroid/preference/PreferenceGroup;)V
+
+    .line 181
+    return-void
+.end method
