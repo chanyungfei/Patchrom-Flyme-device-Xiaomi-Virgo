@@ -96,7 +96,7 @@ board_saved_files := lib/libwebviewchromium.so bin/bootanimation bin/shutdownani
 # The default value is nothing.
 # You can configure the board system apk name in the value.
 #-----------------------------------------------------------------------------
-board_remove_apps := NfcNci Search
+board_remove_apps := NfcNci
 
 ##############################################################################
 # The value decides which apk you want to modify, when the apk is based on the board system apk.
@@ -176,9 +176,9 @@ override_property += \
 ##############################################################################
 # Defines whether generates a block-based OTA, system.img.dat in DAT format will be produced.
 # Will fall back to a file-based OTA if the target_files is older and doesn't support block-based OTAs.
-# Default: false
+# Default: true
 #-----------------------------------------------------------------------------
-#PRODUCE_BLOCK_BASED_OTA := true
+#PRODUCE_BLOCK_BASED_OTA := false
 
 
 include $(PORT_BUILD)/main.mk
