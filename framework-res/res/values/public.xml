@@ -8631,4 +8631,5 @@
     <public type="^attr-private" name="cantSaveState" id="0x011600b7" />
     <public type="^attr-private" name="allowViaWhitelist" id="0x011600b8" />
     <public type="^attr-private" name="primaryUserOnly" id="0x011600b9" />
+    <public type="^attr-private" name="needAccessControl" id="0x011600ba" />
 </resources>
