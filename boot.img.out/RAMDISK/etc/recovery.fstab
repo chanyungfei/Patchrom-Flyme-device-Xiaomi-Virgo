@@ -1,0 +1,7 @@
+/system		ext4	/dev/block/platform/msm_sdcc.1/by-name/system
+/data		ext4	/dev/block/platform/msm_sdcc.1/by-name/userdata 	  length=-16384
+/cache		ext4	/dev/block/platform/msm_sdcc.1/by-name/cache
+/boot		emmc	/dev/block/platform/msm_sdcc.1/by-name/boot
+/recovery	emmc	/dev/block/platform/msm_sdcc.1/by-name/recovery
+
+/usbdisk	   vfat		 /dev/block/sda4	/dev/block/sda	flags=display=USB-OTG;storage;removable
