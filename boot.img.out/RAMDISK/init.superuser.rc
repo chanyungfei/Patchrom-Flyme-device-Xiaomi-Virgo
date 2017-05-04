@@ -1,0 +1,23 @@
+# su daemon
+service daemonsu /system/xbin/su --daemon
+    class main
+    user root
+    seclabel u:r:su:s0
+
+on property:persist.sys.root_access=0
+    stop daemonsu
+
+on property:persist.sys.root_access=2
+    stop daemonsu
+
+on property:persist.sys.root_access=1
+    start daemonsu
+
+on property:persist.sys.root_access=3
+    start daemonsu
+
+on property:init.svc.daemonsu=running
+    mkdir /dev/com.android.settings.daemon 0755 root root
+    restorecon_recursive /dev/com.android.settings.daemon
+    mkdir /dev/com.android.settings 0755 root root
+    restorecon_recursive /dev/com.android.settings
