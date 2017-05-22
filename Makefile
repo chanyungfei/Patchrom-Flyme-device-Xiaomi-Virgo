@@ -58,7 +58,8 @@ vendor_saved_apps := Bluetooth BluetoothExt BluetoothMidiService HTMLViewer KeyC
                      PicoTts PrintSpooler Stk UserDictionaryProvider BackupRestoreConfirmation \
 		     DefaultContainerService ExternalStorageProvider FusedLocation InputDevices \
 		     ProxyHandler SharedStorageBackup Shell \
-		     telresources CMSettingsProvider CMAudioService ThemesProvider
+		     telresources CMSettingsProvider CMAudioService ThemesProvider \
+		     TimeService qcrilmsgtunnel shutdownlistener
 
 ##############################################################################
 # The value decides which vendor apk you want to modify.
