@@ -110,7 +110,7 @@ vendor_modify_jars := framework qti-telephony-common services telephony-common w
 # The command idtoname how to use: first use "apktool d source/system/framework/framework-res.apk other/TMP/framework-res",
 # and then use "idtoname other/TMP/framework-res/res/values/public_master.xml XXXX/smali"(XXXX is the directory where you decode board system apk).
 #-----------------------------------------------------------------------------
-#board_modify_apps := TeleService
+board_modify_apps := TeleService
 
 ##############################################################################
 # The value decides which jar you want to modify, when the jar is based on the board framework jar.
@@ -180,13 +180,13 @@ override_property += \
 # Will fall back to a file-based OTA if the target_files is older and doesn't support block-based OTAs.
 # Default: true
 #-----------------------------------------------------------------------------
-#PRODUCE_BLOCK_BASED_OTA := false
+PRODUCE_BLOCK_BASED_OTA := false
 
 ##############################################################################
 # Defines whether build an international version of package.
 # Default: false
 #-----------------------------------------------------------------------------
-#PRODUCE_INTERNATIONAL_ROM := true
+PRODUCE_INTERNATIONAL_ROM := true
 
 ##############################################################################
 # Defines whether use sepolicy inject.
