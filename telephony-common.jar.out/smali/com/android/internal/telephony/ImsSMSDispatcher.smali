@@ -1606,22 +1606,18 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 445
     iget-object v4, p0, Lcom/android/internal/telephony/ImsSMSDispatcher;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    .line 446
-    const v5, 0x1120083
+    const v5, #android:bool@config_send_sms1x_on_voice_call#t
 
-    .line 445
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v3
 
-    .line 447
     .local v3, "sendSmsOn1x":Z
     iget-object v4, p0, Lcom/android/internal/telephony/ImsSMSDispatcher;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 

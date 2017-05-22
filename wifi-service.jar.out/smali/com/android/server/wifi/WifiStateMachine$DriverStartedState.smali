@@ -1152,7 +1152,7 @@
 
     move-result-object v7
 
-    const v9, 0x112000c
+    const v9, #android:bool@wifi_autocon#t
 
     invoke-virtual {v7, v9}, Landroid/content/res/Resources;->getBoolean(I)Z
 

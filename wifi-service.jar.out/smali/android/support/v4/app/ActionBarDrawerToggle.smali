@@ -24,7 +24,7 @@
 
 
 # static fields
-.field private static final ID_HOME:I = 0x102002c
+.field private static final ID_HOME:I = #android:id@home#t
 
 .field private static final IMPL:Landroid/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImpl;
 
@@ -524,7 +524,7 @@
 
     move-result v0
 
-    const v1, 0x102002c
+    const v1, #android:id@home#t
 
     if-ne v0, v1, :cond_1
 

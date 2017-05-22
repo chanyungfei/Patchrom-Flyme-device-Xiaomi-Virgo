@@ -29,21 +29,18 @@
     .locals 3
 
     .prologue
-    .line 2333
-    const v0, 0x1010003
+    const v0, #android:attr@name#t
 
-    const v1, 0x10100d0
+    const v1, #android:attr@id#t
 
-    const v2, 0x10100d1
+    const v2, #android:attr@tag#t
 
-    .line 2332
     filled-new-array {v0, v1, v2}, [I
 
     move-result-object v0
 
     sput-object v0, Landroid/support/v4/app/FragmentManagerImpl$FragmentTag;->Fragment:[I
 
-    .line 2331
     return-void
 .end method
 

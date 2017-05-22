@@ -394,6 +394,7 @@
 
 .field public static final SHOW_ASSIST_FROM_ACTIVITY_TRANSACTION:I = 0x12d
 
+.field public static final SHOW_BOOT_MESSAGE_TRANSACTION:I = 0x8a
 .field public static final SHOW_LOCK_TASK_ESCAPE_MESSAGE_TRANSACTION:I = 0x127
 
 .field public static final SHOW_WAITING_FOR_DEBUGGER_TRANSACTION:I = 0x3a
@@ -2084,7 +2085,6 @@
         }
     .end annotation
 .end method
-
 .method public abstract showLockTaskEscapeMessage(Landroid/os/IBinder;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -2441,6 +2441,14 @@
 .end method
 
 .method public abstract willActivityBeVisible(Landroid/os/IBinder;)Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract showBootMessage(Ljava/lang/CharSequence;Z)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

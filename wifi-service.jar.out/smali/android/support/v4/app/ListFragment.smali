@@ -180,13 +180,11 @@
 
     iput-object v3, p0, Landroid/support/v4/app/ListFragment;->mStandardEmptyView:Landroid/widget/TextView;
 
-    .line 334
     iget-object v3, p0, Landroid/support/v4/app/ListFragment;->mStandardEmptyView:Landroid/widget/TextView;
 
     if-nez v3, :cond_5
 
-    .line 335
-    const v3, 0x1020004
+    const v3, #android:id@empty#t
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -213,34 +211,27 @@
 
     iput-object v3, p0, Landroid/support/v4/app/ListFragment;->mListContainer:Landroid/view/View;
 
-    .line 341
-    const v3, 0x102000a
+    const v3, #android:id@list#t
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 342
     .local v1, "rawListView":Landroid/view/View;
     instance-of v3, v1, Landroid/widget/ListView;
 
     if-nez v3, :cond_7
 
-    .line 343
     if-nez v1, :cond_6
 
-    .line 344
     new-instance v3, Ljava/lang/RuntimeException;
 
-    .line 345
-    const-string/jumbo v4, "Your content must have a ListView whose id attribute is \'android.R.id.list\'"
+    const-string v4, "Your content must have a ListView whose id attribute is \'android.R.id.list\'"
 
-    .line 344
     invoke-direct {v3, v4}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     throw v3
 
-    .line 337
     .end local v1    # "rawListView":Landroid/view/View;
     :cond_5
     iget-object v3, p0, Landroid/support/v4/app/ListFragment;->mStandardEmptyView:Landroid/widget/TextView;
@@ -326,9 +317,9 @@
     .param p2, "animate"    # Z
 
     .prologue
-    const v5, 0x10a0001
+    const v5, #android:anim@fade_out#t
 
-    const/high16 v4, 0x10a0000
+    const/high16 v4, #android:anim@fade_in#i
 
     const/16 v3, 0x8
 
@@ -561,54 +552,43 @@
 
     const/4 v9, -0x1
 
-    .line 91
     invoke-virtual {p0}, Landroid/support/v4/app/ListFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
-    .line 93
     .local v0, "context":Landroid/content/Context;
     new-instance v5, Landroid/widget/FrameLayout;
 
     invoke-direct {v5, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 97
     .local v5, "root":Landroid/widget/FrameLayout;
     new-instance v3, Landroid/widget/LinearLayout;
 
     invoke-direct {v3, v0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 98
     .local v3, "pframe":Landroid/widget/LinearLayout;
     const v7, 0xff0002
 
     invoke-virtual {v3, v7}, Landroid/widget/LinearLayout;->setId(I)V
 
-    .line 99
     const/4 v7, 0x1
 
     invoke-virtual {v3, v7}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 100
     const/16 v7, 0x8
 
     invoke-virtual {v3, v7}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 101
     invoke-virtual {v3, v11}, Landroid/widget/LinearLayout;->setGravity(I)V
 
-    .line 103
     new-instance v4, Landroid/widget/ProgressBar;
 
     const/4 v7, 0x0
 
-    .line 104
-    const v8, 0x101007a
+    const v8, #android:attr@progressBarStyleLarge#t
 
-    .line 103
     invoke-direct {v4, v0, v7, v8}, Landroid/widget/ProgressBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 105
     .local v4, "progress":Landroid/widget/ProgressBar;
     new-instance v7, Landroid/widget/FrameLayout$LayoutParams;
 
@@ -668,39 +648,33 @@
 
     invoke-direct {v2, v7}, Landroid/widget/ListView;-><init>(Landroid/content/Context;)V
 
-    .line 123
     .local v2, "lv":Landroid/widget/ListView;
-    const v7, 0x102000a
+    const v7, #android:id@list#t
 
     invoke-virtual {v2, v7}, Landroid/widget/ListView;->setId(I)V
 
-    .line 124
     const/4 v7, 0x0
 
     invoke-virtual {v2, v7}, Landroid/widget/ListView;->setDrawSelectorOnTop(Z)V
 
-    .line 125
     new-instance v7, Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-direct {v7, v9, v9}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
     invoke-virtual {v1, v2, v7}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 128
     new-instance v7, Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-direct {v7, v9, v9}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
     invoke-virtual {v5, v1, v7}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 133
     new-instance v7, Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-direct {v7, v9, v9}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
     invoke-virtual {v5, v7}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 136
     return-object v5
 .end method
 

@@ -99,27 +99,22 @@
 
     invoke-static {v8, v9}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 291
     return-object v7
 
-    .line 299
     .end local v2    # "length":I
     .end local v4    # "rawValue":[B
     .end local v6    # "valueIndex":I
     :cond_1
     const/4 v3, 0x0
 
-    .line 300
     .local v3, "noAlphaUsrCnf":Z
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v5
 
-    .line 303
     .local v5, "resource":Landroid/content/res/Resources;
-    const v8, 0x112008f
+    const v8, #android:bool@config_stkNoAlphaUsrCnf#t
 
-    .line 302
     :try_start_1
     invoke-virtual {v5, v8}, Landroid/content/res/Resources;->getBoolean(I)Z
     :try_end_1

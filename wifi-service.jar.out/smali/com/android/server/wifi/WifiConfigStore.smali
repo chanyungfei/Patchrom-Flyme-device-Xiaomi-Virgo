@@ -1990,17 +1990,14 @@
 
     move-result-object v2
 
-    .line 585
-    const v3, 0x10e0030
+    const v3, #android:integer@config_wifi_associated_short_scan_interval#t
 
-    .line 584
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v2
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 586
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->wifiAssociatedLongScanIntervalMilli:Ljava/util/concurrent/atomic/AtomicInteger;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
@@ -2009,17 +2006,14 @@
 
     move-result-object v2
 
-    .line 587
-    const v3, 0x10e0030
+    const v3, #android:integer@config_wifi_associated_short_scan_interval#t
 
-    .line 586
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v2
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 588
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->wifiDisconnectedShortScanIntervalMilli:Ljava/util/concurrent/atomic/AtomicInteger;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
@@ -2028,17 +2022,14 @@
 
     move-result-object v2
 
-    .line 589
-    const v3, 0x10e002e
+    const v3, #android:integer@config_wifi_disconnected_short_scan_interval#t
 
-    .line 588
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v2
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 590
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->wifiDisconnectedLongScanIntervalMilli:Ljava/util/concurrent/atomic/AtomicInteger;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
@@ -2047,34 +2038,28 @@
 
     move-result-object v2
 
-    .line 591
-    const v3, 0x10e002f
+    const v3, #android:integer@config_wifi_disconnected_long_scan_interval#t
 
-    .line 590
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v2
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 593
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 594
-    const v2, 0x1120024
+    const v2, #android:bool@config_wifi_only_link_same_credential_configurations#t
 
-    .line 593
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v1
 
     iput-boolean v1, p0, Lcom/android/server/wifi/WifiConfigStore;->onlyLinkSameCredentialConfigurations:Z
 
-    .line 595
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->maxNumActiveChannelsForPartialScans:Ljava/util/concurrent/atomic/AtomicInteger;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
@@ -2083,17 +2068,14 @@
 
     move-result-object v2
 
-    .line 596
-    const v3, 0x10e0035
+    const v3, #android:integer@config_wifi_framework_associated_partial_scan_max_num_active_channels#t
 
-    .line 595
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v2
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 597
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->maxNumPassiveChannelsForPartialScans:Ljava/util/concurrent/atomic/AtomicInteger;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
@@ -2102,34 +2084,28 @@
 
     move-result-object v2
 
-    .line 598
-    const v3, 0x10e0036
+    const v3, #android:integer@config_wifi_framework_associated_partial_scan_max_num_passive_channels#t
 
-    .line 597
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v2
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 599
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 600
-    const v2, 0x10e0033
+    const v2, #android:integer@config_wifi_framework_associated_full_scan_max_interval#t
 
-    .line 599
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/wifi/WifiConfigStore;->associatedFullScanMaxIntervalMilli:I
 
-    .line 601
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->associatedFullScanBackoff:Ljava/util/concurrent/atomic/AtomicInteger;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
@@ -2138,85 +2114,70 @@
 
     move-result-object v2
 
-    .line 602
-    const v3, 0x10e0032
+    const v3, #android:integer@config_wifi_framework_associated_full_scan_backoff#t
 
-    .line 601
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v2
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 603
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 604
-    const v2, 0x112001d
+    const v2, #android:bool@config_wifi_enable_disconnection_debounce#t
 
-    .line 603
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v1
 
     iput-boolean v1, p0, Lcom/android/server/wifi/WifiConfigStore;->enableLinkDebouncing:Z
 
-    .line 606
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 607
-    const v2, 0x112001e
+    const v2, #android:bool@config_wifi_enable_5GHz_preference#t
 
-    .line 606
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v1
 
     iput-boolean v1, p0, Lcom/android/server/wifi/WifiConfigStore;->enable5GHzPreference:Z
 
-    .line 609
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 610
-    const v2, 0x10e0014
+    const v2, #android:integer@config_wifi_framework_5GHz_preference_boost_factor#t
 
-    .line 609
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/wifi/WifiConfigStore;->bandPreferenceBoostFactor5:I
 
-    .line 611
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 612
-    const v2, 0x10e0018
+    const v2, #android:integer@config_wifi_framework_5GHz_preference_penalty_factor#t
 
-    .line 611
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/wifi/WifiConfigStore;->bandPreferencePenaltyFactor5:I
 
-    .line 614
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->bandPreferencePenaltyThreshold5:Ljava/util/concurrent/atomic/AtomicInteger;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
@@ -2225,17 +2186,14 @@
 
     move-result-object v2
 
-    .line 615
-    const v3, 0x10e0017
+    const v3, #android:integer@config_wifi_framework_5GHz_preference_penalty_threshold#t
 
-    .line 614
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v2
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 616
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->bandPreferenceBoostThreshold5:Ljava/util/concurrent/atomic/AtomicInteger;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
@@ -2244,51 +2202,42 @@
 
     move-result-object v2
 
-    .line 617
-    const v3, 0x10e0013
+    const v3, #android:integer@config_wifi_framework_5GHz_preference_boost_threshold#t
 
-    .line 616
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v2
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 619
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 620
-    const v2, 0x10e0015
+    const v2, #android:integer@config_wifi_framework_current_association_hysteresis_high#t
 
-    .line 619
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/wifi/WifiConfigStore;->associatedHysteresisHigh:I
 
-    .line 621
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 622
-    const v2, 0x10e0016
+    const v2, #android:integer@config_wifi_framework_current_association_hysteresis_low#t
 
-    .line 621
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/wifi/WifiConfigStore;->associatedHysteresisLow:I
 
-    .line 624
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->thresholdBadRssi5:Ljava/util/concurrent/atomic/AtomicInteger;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
@@ -2297,17 +2246,14 @@
 
     move-result-object v2
 
-    .line 625
-    const v3, 0x10e0019
+    const v3, #android:integer@config_wifi_framework_wifi_score_bad_rssi_threshold_5GHz#t
 
-    .line 624
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v2
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 626
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->thresholdLowRssi5:Ljava/util/concurrent/atomic/AtomicInteger;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
@@ -2316,17 +2262,14 @@
 
     move-result-object v2
 
-    .line 627
-    const v3, 0x10e001a
+    const v3, #android:integer@config_wifi_framework_wifi_score_low_rssi_threshold_5GHz#t
 
-    .line 626
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v2
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 628
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->thresholdGoodRssi5:Ljava/util/concurrent/atomic/AtomicInteger;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
@@ -2335,17 +2278,14 @@
 
     move-result-object v2
 
-    .line 629
-    const v3, 0x10e001b
+    const v3, #android:integer@config_wifi_framework_wifi_score_good_rssi_threshold_5GHz#t
 
-    .line 628
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v2
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 630
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->thresholdBadRssi24:Ljava/util/concurrent/atomic/AtomicInteger;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
@@ -2354,17 +2294,14 @@
 
     move-result-object v2
 
-    .line 631
-    const v3, 0x10e001c
+    const v3, #android:integer@config_wifi_framework_wifi_score_bad_rssi_threshold_24GHz#t
 
-    .line 630
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v2
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 632
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->thresholdLowRssi24:Ljava/util/concurrent/atomic/AtomicInteger;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
@@ -2373,17 +2310,14 @@
 
     move-result-object v2
 
-    .line 633
-    const v3, 0x10e001d
+    const v3, #android:integer@config_wifi_framework_wifi_score_low_rssi_threshold_24GHz#t
 
-    .line 632
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v2
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 634
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->thresholdGoodRssi24:Ljava/util/concurrent/atomic/AtomicInteger;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
@@ -2392,153 +2326,126 @@
 
     move-result-object v2
 
-    .line 635
-    const v3, 0x10e001e
+    const v3, #android:integer@config_wifi_framework_wifi_score_good_rssi_threshold_24GHz#t
 
-    .line 634
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v2
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 637
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 638
-    const v2, 0x1120022
+    const v2, #android:bool@config_wifi_framework_cellular_handover_enable_user_triggered_adjustment#t
 
-    .line 637
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v1
 
     iput-boolean v1, p0, Lcom/android/server/wifi/WifiConfigStore;->enableWifiCellularHandoverUserTriggeredAdjustment:Z
 
-    .line 640
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 641
-    const v2, 0x10e001f
+    const v2, #android:integer@config_wifi_framework_wifi_score_bad_link_speed_24#t
 
-    .line 640
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/wifi/WifiConfigStore;->badLinkSpeed24:I
 
-    .line 642
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 643
-    const v2, 0x10e0020
+    const v2, #android:integer@config_wifi_framework_wifi_score_bad_link_speed_5#t
 
-    .line 642
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/wifi/WifiConfigStore;->badLinkSpeed5:I
 
-    .line 644
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 645
-    const v2, 0x10e0021
+    const v2, #android:integer@config_wifi_framework_wifi_score_good_link_speed_24#t
 
-    .line 644
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/wifi/WifiConfigStore;->goodLinkSpeed24:I
 
-    .line 646
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 647
-    const v2, 0x10e0022
+    const v2, #android:integer@config_wifi_framework_wifi_score_good_link_speed_5#t
 
-    .line 646
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/wifi/WifiConfigStore;->goodLinkSpeed5:I
 
-    .line 649
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 650
-    const v2, 0x10e0038
+    const v2, #android:integer@config_wifi_framework_max_auth_errors_to_blacklist#t
 
-    .line 649
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/wifi/WifiConfigStore;->maxAuthErrorsToBlacklist:I
 
-    .line 651
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 652
-    const v2, 0x10e0037
+    const v2, #android:integer@config_wifi_framework_max_connection_errors_to_blacklist#t
 
-    .line 651
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/wifi/WifiConfigStore;->maxConnectionErrorsToBlacklist:I
 
-    .line 653
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 654
-    const v2, 0x10e0039
+    const v2, #android:integer@config_wifi_framework_network_black_list_min_time_milli#t
 
-    .line 653
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/wifi/WifiConfigStore;->wifiConfigBlacklistMinTimeMilli:I
 
-    .line 656
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->enableAutoJoinWhenAssociated:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
@@ -2547,68 +2454,56 @@
 
     move-result-object v2
 
-    .line 657
-    const v3, 0x1120023
+    const v3, #android:bool@config_wifi_framework_enable_associated_network_selection#t
 
-    .line 656
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v2
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 659
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 660
-    const v2, 0x10e003a
+    const v2, #android:integer@config_wifi_framework_current_network_boost#t
 
-    .line 659
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/wifi/WifiConfigStore;->currentNetworkBoost:I
 
-    .line 662
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 663
-    const v2, 0x10e003d
+    const v2, #android:integer@config_wifi_framework_scan_result_rssi_level_patchup_value#t
 
-    .line 662
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/wifi/WifiConfigStore;->scanResultRssiLevelPatchUp:I
 
-    .line 665
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 666
-    const v2, 0x10e002a
+    const v2, #android:integer@config_wifi_network_switching_blacklist_time#t
 
-    .line 665
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/wifi/WifiConfigStore;->networkSwitchingBlackListPeriodMilli:I
 
-    .line 668
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->enableHalBasedPno:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
@@ -2617,17 +2512,14 @@
 
     move-result-object v2
 
-    .line 669
-    const v3, 0x1120026
+    const v3, #android:bool@config_wifi_hal_pno_enable#t
 
-    .line 668
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v2
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 671
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->enableSsidWhitelist:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiConfigStore;->mContext:Landroid/content/Context;
@@ -2636,17 +2528,14 @@
 
     move-result-object v2
 
-    .line 672
-    const v3, 0x1120027
+    const v3, #android:bool@config_wifi_ssid_white_list_enable#t
 
-    .line 671
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v2
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 673
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore;->enableHalBasedPno:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -2676,7 +2565,7 @@
 
     move-result-object v1
 
-    const v2, 0x112001b
+    const v2, #android:bool@config_wifi_hotspot2_enabled#t
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 

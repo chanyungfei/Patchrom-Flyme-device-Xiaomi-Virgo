@@ -2405,17 +2405,14 @@
 
     move-result-object v6
 
-    .line 194
-    const v7, 0x11200a6
+    const v7, #android:bool@config_switch_phone_on_voice_reg_state_change#t
 
-    .line 193
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v6
 
     if-eqz v6, :cond_5
 
-    .line 199
     :cond_4
     :goto_2
     iget-object v6, p0, Lcom/android/internal/telephony/PhoneProxy;->mContext:Landroid/content/Context;

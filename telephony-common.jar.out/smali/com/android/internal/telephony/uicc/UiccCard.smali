@@ -674,7 +674,7 @@
     .locals 11
 
     .prologue
-    const v7, 0x1040093
+    const v7, #android:string@uicc_hot_swapped_event_title#t
 
     const/4 v3, 0x2
 
@@ -708,45 +708,36 @@
 
     invoke-direct {v0, v2}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 451
-    const v2, 0x1080647
+    const v2, #android:drawable@stat_notify_disabled_data#t
 
-    .line 450
     invoke-virtual {v0, v2}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
     move-result-object v0
 
-    .line 452
-    const v2, 0x1060070
+    const v2, #android:color@system_notification_accent_color#t
 
     invoke-virtual {v10, v2}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v2
 
-    .line 450
     invoke-virtual {v0, v2}, Landroid/app/Notification$Builder;->setColor(I)Landroid/app/Notification$Builder;
 
     move-result-object v0
 
-    .line 453
     invoke-virtual {v10, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 450
     invoke-virtual {v0, v2}, Landroid/app/Notification$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
     move-result-object v0
 
-    .line 456
-    const v2, 0x1040094
+    const v2, #android:string@uicc_hot_swapped_event_text#t
 
-    .line 455
     invoke-virtual {v10, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 450
     invoke-virtual {v0, v2}, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
     move-result-object v0
@@ -787,48 +778,39 @@
 
     move-result-object v5
 
-    .line 466
     .local v5, "notification":Landroid/app/Notification;
     const/4 v0, 0x1
 
     :try_start_0
     new-array v6, v0, [I
 
-    .line 467
     .local v6, "outId":[I
-    const-string/jumbo v1, "android"
+    const-string v1, "android"
 
-    const-string/jumbo v2, "android"
+    const-string v2, "android"
 
-    .line 469
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v7
 
-    .line 467
     const/4 v3, 0x0
 
-    .line 468
-    const v4, 0x1040093
+    const v4, #android:string@uicc_hot_swapped_event_title#t
 
     move-object v0, v9
 
-    .line 467
     invoke-interface/range {v0 .. v7}, Landroid/app/INotificationManager;->enqueueNotificationWithTag(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILandroid/app/Notification;[II)V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 442
     .end local v6    # "outId":[I
     :goto_0
     return-void
 
-    .line 470
     :catch_0
     move-exception v8
 
-    .line 471
     .local v8, "e":Ljava/lang/Exception;
     invoke-virtual {v8}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
@@ -875,31 +857,25 @@
     .param p1, "isAdded"    # Z
 
     .prologue
-    .line 364
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/UiccCard;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 365
-    const v2, 0x1120051
+    const v2, #android:bool@config_hotswapCapable#t
 
-    .line 364
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v0
 
-    .line 367
     .local v0, "isHotSwapSupported":Z
     if-eqz v0, :cond_1
 
-    .line 368
-    const-string/jumbo v1, "onIccSwap: isHotSwapSupported is true, don\'t prompt for rebooting"
+    const-string v1, "onIccSwap: isHotSwapSupported is true, don\'t prompt for rebooting"
 
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/uicc/UiccCard;->log(Ljava/lang/String;)V
 
-    .line 372
     if-eqz p1, :cond_0
 
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -952,20 +928,16 @@
 
     move-result-object v8
 
-    .line 386
     .local v8, "res":Landroid/content/res/Resources;
-    const v10, 0x104009f
+    const v10, #android:string@config_iccHotswapPromptForRestartDialogComponent#t
 
-    .line 385
     invoke-virtual {v8, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 387
     .local v2, "dialogComponent":Ljava/lang/String;
     if-eqz v2, :cond_0
 
-    .line 388
     new-instance v10, Landroid/content/Intent;
 
     invoke-direct {v10}, Landroid/content/Intent;-><init>()V
@@ -1061,7 +1033,7 @@
     .local v7, "r":Landroid/content/res/Resources;
     if-eqz p1, :cond_1
 
-    const v10, 0x1040445
+    const v10, #android:string@sim_added_title#t
 
     invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1072,7 +1044,7 @@
     :goto_0
     if-eqz p1, :cond_2
 
-    const v10, 0x1040446
+    const v10, #android:string@sim_added_message#t
 
     invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1081,7 +1053,7 @@
     .line 430
     .local v6, "message":Ljava/lang/String;
     :goto_1
-    const v10, 0x1040447
+    const v10, #android:string@sim_restart_button#t
 
     invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1137,7 +1109,7 @@
     .end local v6    # "message":Ljava/lang/String;
     .end local v9    # "title":Ljava/lang/String;
     :cond_1
-    const v10, 0x1040442
+    const v10, #android:string@sim_removed_title#t
 
     :try_start_3
     invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -1149,7 +1121,7 @@
 
     .line 429
     :cond_2
-    const v10, 0x1040443
+    const v10, #android:string@sim_removed_message#t
 
     invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
     :try_end_3

@@ -1557,87 +1557,70 @@
     .locals 4
 
     .prologue
-    .line 1486
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 1487
     .local v0, "intentFilter":Landroid/content/IntentFilter;
-    const-string/jumbo v2, "android.intent.action.SCREEN_ON"
+    const-string v2, "android.intent.action.SCREEN_ON"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1488
-    const-string/jumbo v2, "android.intent.action.USER_PRESENT"
+    const-string v2, "android.intent.action.USER_PRESENT"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1489
-    const-string/jumbo v2, "android.intent.action.SCREEN_OFF"
+    const-string v2, "android.intent.action.SCREEN_OFF"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1490
-    const-string/jumbo v2, "android.intent.action.BATTERY_CHANGED"
+    const-string v2, "android.intent.action.BATTERY_CHANGED"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1491
-    const-string/jumbo v2, "android.net.wifi.STATE_CHANGE"
+    const-string v2, "android.net.wifi.STATE_CHANGE"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1492
-    const-string/jumbo v2, "android.net.wifi.WIFI_STATE_CHANGED"
+    const-string v2, "android.net.wifi.WIFI_STATE_CHANGED"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1493
-    const-string/jumbo v2, "android.net.wifi.WIFI_AP_STATE_CHANGED"
+    const-string v2, "android.net.wifi.WIFI_AP_STATE_CHANGED"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1494
-    const-string/jumbo v2, "android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED"
+    const-string v2, "android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1495
-    const-string/jumbo v2, "android.os.action.DEVICE_IDLE_MODE_CHANGED"
+    const-string v2, "android.os.action.DEVICE_IDLE_MODE_CHANGED"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1496
-    const-string/jumbo v2, "android.intent.action.EMERGENCY_CALLBACK_MODE_CHANGED"
+    const-string v2, "android.intent.action.EMERGENCY_CALLBACK_MODE_CHANGED"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1498
     iget-object v2, p0, Lcom/android/server/wifi/WifiServiceImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    .line 1499
-    const v3, 0x1120021
+    const v3, #android:bool@config_wifi_turn_off_during_emergency_call#t
 
-    .line 1498
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v1
 
-    .line 1500
     .local v1, "trackEmergencyCallState":Z
     if-eqz v1, :cond_0
 
-    .line 1501
-    const-string/jumbo v2, "android.intent.action.EMERGENCY_CALL_STATE_CHANGED"
+    const-string v2, "android.intent.action.EMERGENCY_CALL_STATE_CHANGED"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1504
     :cond_0
     iget-object v2, p0, Lcom/android/server/wifi/WifiServiceImpl;->mContext:Landroid/content/Context;
 
@@ -5280,17 +5263,14 @@
     .locals 2
 
     .prologue
-    .line 1173
     iget-object v0, p0, Lcom/android/server/wifi/WifiServiceImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 1174
-    const v1, 0x112001a
+    const v1, #android:bool@config_wifi_dual_band_support#t
 
-    .line 1173
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v0
@@ -5714,10 +5694,8 @@
 
     move-result-object v3
 
-    .line 773
-    const v4, 0x10e003f
+    const v4, #android:integer@config_wifi_idle_receive_cur_ma#t
 
-    .line 772
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v3
@@ -5736,17 +5714,14 @@
 
     move-result-object v3
 
-    .line 775
-    const v4, 0x10e0040
+    const v4, #android:integer@config_wifi_active_rx_cur_ma#t
 
-    .line 774
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v3
 
     int-to-long v14, v3
 
-    .line 776
     .local v14, "rxCurrent":J
     move-object/from16 v0, p0
 
@@ -5756,10 +5731,8 @@
 
     move-result-object v3
 
-    .line 777
-    const v4, 0x10e0041
+    const v4, #android:integer@config_wifi_tx_cur_ma#t
 
-    .line 776
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v3
@@ -5778,23 +5751,18 @@
 
     move-result-object v3
 
-    .line 779
-    const v4, 0x10e0042
+    const v4, #android:integer@config_wifi_operating_voltage_mv#t
 
-    .line 778
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v3
 
     int-to-double v4, v3
 
-    .line 780
     const-wide v6, 0x408f400000000000L    # 1000.0
 
-    .line 778
     div-double v22, v4, v6
 
-    .line 782
     .local v22, "voltage":D
     move-object/from16 v0, v19
 

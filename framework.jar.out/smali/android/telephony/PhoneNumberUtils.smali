@@ -1918,20 +1918,16 @@
     .param p2, "b"    # Ljava/lang/String;
 
     .prologue
-    .line 479
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 480
-    const v2, 0x1120046
+    const v2, #android:bool@config_use_strict_phone_number_comparation#t
 
-    .line 479
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v0
 
-    .line 481
     .local v0, "useStrict":Z
     invoke-static {p1, p2, v0}, Landroid/telephony/PhoneNumberUtils;->compare(Ljava/lang/String;Ljava/lang/String;Z)Z
 

@@ -346,7 +346,7 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    const v4, 0x1020013
+    const v4, #android:id@tabs#t
 
     const/4 v7, 0x0
 
@@ -354,73 +354,59 @@
 
     const/4 v5, -0x1
 
-    .line 151
     invoke-virtual {p0, v4}, Landroid/support/v4/app/FragmentTabHost;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     if-nez v3, :cond_0
 
-    .line 152
     new-instance v1, Landroid/widget/LinearLayout;
 
     invoke-direct {v1, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 153
     .local v1, "ll":Landroid/widget/LinearLayout;
     const/4 v3, 0x1
 
     invoke-virtual {v1, v3}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 154
     new-instance v3, Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-direct {v3, v5, v5}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
     invoke-virtual {p0, v1, v3}, Landroid/support/v4/app/FragmentTabHost;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 158
     new-instance v2, Landroid/widget/TabWidget;
 
     invoke-direct {v2, p1}, Landroid/widget/TabWidget;-><init>(Landroid/content/Context;)V
 
-    .line 159
     .local v2, "tw":Landroid/widget/TabWidget;
     invoke-virtual {v2, v4}, Landroid/widget/TabWidget;->setId(I)V
 
-    .line 160
     invoke-virtual {v2, v6}, Landroid/widget/TabWidget;->setOrientation(I)V
 
-    .line 161
     new-instance v3, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 163
     const/4 v4, -0x2
 
-    .line 161
     invoke-direct {v3, v5, v4, v7}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
 
     invoke-virtual {v1, v2, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 165
     new-instance v0, Landroid/widget/FrameLayout;
 
     invoke-direct {v0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 166
     .local v0, "fl":Landroid/widget/FrameLayout;
-    const v3, 0x1020011
+    const v3, #android:id@tabcontent#t
 
     invoke-virtual {v0, v3}, Landroid/widget/FrameLayout;->setId(I)V
 
-    .line 167
     new-instance v3, Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-direct {v3, v6, v6, v7}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
 
     invoke-virtual {v1, v0, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 169
     new-instance v0, Landroid/widget/FrameLayout;
 
     .end local v0    # "fl":Landroid/widget/FrameLayout;
@@ -468,7 +454,7 @@
 
     new-array v1, v1, [I
 
-    const v2, 0x10100f3
+    const v2, #android:attr@inflatedId#t
 
     aput v2, v1, v3
 
@@ -951,12 +937,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 207
-    const v0, 0x1020012
+    const v0, #android:id@tabhost#t
 
     invoke-virtual {p0, v0}, Landroid/support/v4/app/FragmentTabHost;->setId(I)V
 
-    .line 195
     :cond_0
     return-void
 .end method

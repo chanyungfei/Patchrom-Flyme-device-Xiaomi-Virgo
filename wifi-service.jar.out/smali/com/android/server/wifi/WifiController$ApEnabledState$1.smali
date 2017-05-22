@@ -161,26 +161,22 @@
 
     move-result-object v3
 
-    .line 682
-    const v4, 0x104003c
+    const v4, #android:string@subscription_change_disabled_wifi_ap#t
 
-    .line 681
     invoke-static {v3, v4, v5}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
     move-result-object v3
 
     invoke-virtual {v3}, Landroid/widget/Toast;->show()V
 
-    .line 684
     iget-object v3, p0, Lcom/android/server/wifi/WifiController$ApEnabledState$1;->this$1:Lcom/android/server/wifi/WifiController$ApEnabledState;
 
     iget-object v3, v3, Lcom/android/server/wifi/WifiController$ApEnabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
-    const-string/jumbo v4, "disabling Wifi AP due to Subscriber Id (IMSI) change"
+    const-string v4, "disabling Wifi AP due to Subscriber Id (IMSI) change"
 
     invoke-static {v3, v4}, Lcom/android/server/wifi/WifiController;->-wrap4(Lcom/android/server/wifi/WifiController;Ljava/lang/String;)V
 
-    .line 685
     iget-object v3, p0, Lcom/android/server/wifi/WifiController$ApEnabledState$1;->this$1:Lcom/android/server/wifi/WifiController$ApEnabledState;
 
     iget-object v3, v3, Lcom/android/server/wifi/WifiController$ApEnabledState;->this$0:Lcom/android/server/wifi/WifiController;

@@ -83,59 +83,47 @@
     .locals 4
 
     .prologue
-    .line 68
-    const v0, 0x1010034
+    const v0, #android:attr@textAppearance#t
 
-    .line 69
-    const v1, 0x1010095
+    const v1, #android:attr@textSize#t
 
-    .line 70
-    const v2, 0x1010098
+    const v2, #android:attr@textColor#t
 
-    .line 71
-    const v3, 0x10100af
+    const v3, #android:attr@gravity#t
 
-    .line 67
     filled-new-array {v0, v1, v2, v3}, [I
 
     move-result-object v0
 
     sput-object v0, Landroid/support/v4/view/PagerTitleStrip;->ATTRS:[I
 
-    .line 74
     const/4 v0, 0x1
 
     new-array v0, v0, [I
 
-    .line 75
-    const v1, 0x101038c
+    const v1, #android:attr@textAllCaps#t
 
     const/4 v2, 0x0
 
     aput v1, v0, v2
 
-    .line 74
     sput-object v0, Landroid/support/v4/view/PagerTitleStrip;->TEXT_ATTRS:[I
 
-    .line 102
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0xe
 
     if-lt v0, v1, :cond_0
 
-    .line 103
     new-instance v0, Landroid/support/v4/view/PagerTitleStrip$PagerTitleStripImplIcs;
 
     invoke-direct {v0}, Landroid/support/v4/view/PagerTitleStrip$PagerTitleStripImplIcs;-><init>()V
 
     sput-object v0, Landroid/support/v4/view/PagerTitleStrip;->IMPL:Landroid/support/v4/view/PagerTitleStrip$PagerTitleStripImpl;
 
-    .line 47
     :goto_0
     return-void
 
-    .line 105
     :cond_0
     new-instance v0, Landroid/support/v4/view/PagerTitleStrip$PagerTitleStripImplBase;
 

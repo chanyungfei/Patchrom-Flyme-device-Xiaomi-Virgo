@@ -1081,15 +1081,12 @@
 
     move-result-object v4
 
-    .line 140
-    const v9, 0x10e0097
+    const v9, #android:integer@config_valid_wappush_index#t
 
-    .line 139
     invoke-virtual {v4, v9}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v25
 
-    .line 141
     .end local v26    # "index":I
     .restart local v25    # "index":I
     const/4 v4, -0x1

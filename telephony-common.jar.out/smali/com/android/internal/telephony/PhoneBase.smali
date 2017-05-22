@@ -686,43 +686,37 @@
 
     invoke-interface {v5, p0, v6, v7}, Lcom/android/internal/telephony/CommandsInterface;->setOnCallRing(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 458
     iget-object v5, p0, Lcom/android/internal/telephony/PhoneBase;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
-    .line 459
-    const v6, 0x1120065
+    const v6, #android:bool@config_voice_capable#t
 
-    .line 458
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v5
 
     iput-boolean v5, p0, Lcom/android/internal/telephony/PhoneBase;->mIsVoiceCapable:Z
 
-    .line 472
-    const-string/jumbo v5, "ro.telephony.call_ring.multiple"
+    const-string v5, "ro.telephony.call_ring.multiple"
 
     const/4 v6, 0x1
 
-    .line 471
     invoke-static {v5, v6}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v5
 
     iput-boolean v5, p0, Lcom/android/internal/telephony/PhoneBase;->mDoesRilSendMultipleCallRing:Z
 
-    .line 473
-    const-string/jumbo v5, "PhoneBase"
+    const-string v5, "PhoneBase"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "mDoesRilSendMultipleCallRing="
+    const-string v7, "mDoesRilSendMultipleCallRing="
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1235,7 +1229,7 @@
 
     move-result-object v4
 
-    const v5, 0x107005c
+    const v5, #android:array@carrier_properties#t
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getTextArray(I)[Ljava/lang/CharSequence;
 

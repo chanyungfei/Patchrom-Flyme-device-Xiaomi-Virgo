@@ -281,22 +281,18 @@
 
     sput-object v0, Landroid/support/v4/widget/SwipeRefreshLayout;->LOG_TAG:Ljava/lang/String;
 
-    .line 132
     const/4 v0, 0x1
 
     new-array v0, v0, [I
 
-    .line 133
-    const v1, 0x101000e
+    const v1, #android:attr@enabled#t
 
     const/4 v2, 0x0
 
     aput v1, v0, v2
 
-    .line 132
     sput-object v0, Landroid/support/v4/widget/SwipeRefreshLayout;->LAYOUT_ATTRS:[I
 
-    .line 64
     return-void
 .end method
 
@@ -392,25 +388,20 @@
 
     iput v2, p0, Landroid/support/v4/widget/SwipeRefreshLayout;->mTouchSlop:I
 
-    .line 303
     invoke-virtual {p0}, Landroid/support/v4/widget/SwipeRefreshLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    .line 304
-    const v3, 0x10e0001
+    const v3, #android:integer@config_mediumAnimTime#t
 
-    .line 303
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v2
 
     iput v2, p0, Landroid/support/v4/widget/SwipeRefreshLayout;->mMediumAnimationDuration:I
 
-    .line 306
     invoke-virtual {p0, v4}, Landroid/support/v4/widget/SwipeRefreshLayout;->setWillNotDraw(Z)V
 
-    .line 307
     new-instance v2, Landroid/view/animation/DecelerateInterpolator;
 
     const/high16 v3, 0x40000000    # 2.0f

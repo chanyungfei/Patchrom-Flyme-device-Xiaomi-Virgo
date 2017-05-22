@@ -103,7 +103,7 @@
 
     .line 517
     .local v1, "r":Landroid/content/res/Resources;
-    const v2, 0x11200a7
+    const v2, #android:bool@config_sms_force_7bit_encoding#t
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 

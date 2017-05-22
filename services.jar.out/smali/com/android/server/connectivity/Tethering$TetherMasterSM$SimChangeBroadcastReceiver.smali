@@ -216,7 +216,7 @@
 
     move-result-object v12
 
-    const v13, 0x1040096
+    const v13, #android:string@config_mobile_hotspot_provision_app_no_ui#t
 
     invoke-virtual {v12, v13}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -241,21 +241,17 @@
 
     move-result-object v12
 
-    .line 1730
-    const v13, 0x1040098
+    const v13, #android:string@config_wifi_tether_enable#t
 
-    .line 1729
     invoke-virtual {v12, v13}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 1731
     .local v8, "tetherService":Ljava/lang/String;
     new-instance v11, Ljava/util/ArrayList;
 
     invoke-direct {v11}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1732
     .local v11, "tethered":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     iget-object v12, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$SimChangeBroadcastReceiver;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 

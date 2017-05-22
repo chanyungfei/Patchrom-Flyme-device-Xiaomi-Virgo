@@ -1769,15 +1769,12 @@
 
     move-result-object v2
 
-    .line 9922
-    const v3, 0x10e002b
+    const v3, #android:integer@config_wifi_scan_interval_p2p_connected#t
 
-    .line 9921
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v9
 
-    .line 9923
     .local v9, "defaultInterval":I
     move-object/from16 v0, p0
 

@@ -1204,22 +1204,18 @@
     .locals 3
 
     .prologue
-    .line 282
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/ApnContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 283
-    const v2, 0x10400ae
+    const v2, #android:string@mobile_provisioning_apn#t
 
-    .line 282
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 284
     .local v0, "provisioningApn":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1428,37 +1424,30 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 354
-    const-string/jumbo v7, "ApnContext.resetErrorCodeRetries"
+    const-string v7, "ApnContext.resetErrorCodeRetries"
 
     invoke-virtual {p0, v7}, Lcom/android/internal/telephony/dataconnection/ApnContext;->requestLog(Ljava/lang/String;)V
 
-    .line 357
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v7
 
-    .line 358
-    const v8, 0x107004c
+    const v8, #android:array@config_cell_retries_per_error_code#t
 
-    .line 357
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 359
     .local v1, "config":[Ljava/lang/String;
     iget-object v7, p0, Lcom/android/internal/telephony/dataconnection/ApnContext;->mRetriesLeftPerErrorCode:Landroid/util/SparseIntArray;
 
     monitor-enter v7
 
-    .line 360
     :try_start_0
     iget-object v8, p0, Lcom/android/internal/telephony/dataconnection/ApnContext;->mRetriesLeftPerErrorCode:Landroid/util/SparseIntArray;
 
     invoke-virtual {v8}, Landroid/util/SparseIntArray;->clear()V
 
-    .line 362
     array-length v8, v1
 
     :goto_0

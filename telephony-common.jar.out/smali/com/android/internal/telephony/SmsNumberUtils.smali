@@ -2753,15 +2753,12 @@
 
     move-result-object v4
 
-    .line 604
-    const v5, 0x107004a
+    const v5, #android:array@config_sms_convert_destination_number_support#t
 
-    .line 603
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 606
     .local v2, "listArray":[Ljava/lang/String;
     if-eqz v2, :cond_2
 

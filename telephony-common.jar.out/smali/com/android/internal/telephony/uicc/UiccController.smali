@@ -880,26 +880,21 @@
 
     if-ne v3, v7, :cond_4
 
-    .line 364
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/UiccController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    .line 365
-    const v4, 0x112008b
+    const v4, #android:bool@config_requireRadioPowerOffOnSimRefreshReset#t
 
-    .line 364
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v1
 
-    .line 366
     .local v1, "requirePowerOffOnSimRefreshReset":Z
     if-eqz v1, :cond_4
 
-    .line 367
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/UiccController;->mCis:[Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I

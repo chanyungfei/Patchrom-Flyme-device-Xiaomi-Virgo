@@ -8905,7 +8905,7 @@
 
     if-eqz v2, :cond_4a
 
-    const v2, 0x11200a4
+    const v2, #android:bool@editable_voicemailnumber#t
 
     move-object/from16 v0, v20
 
@@ -9650,7 +9650,7 @@
 
     .line 1410
     .local v1, "resource":Landroid/content/res/Resources;
-    const v4, 0x11200ab
+    const v4, #android:bool@config_use_sim_language_file#t
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getBoolean(I)Z
 

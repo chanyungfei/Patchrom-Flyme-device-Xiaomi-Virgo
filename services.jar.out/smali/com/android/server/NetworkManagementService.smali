@@ -12675,7 +12675,7 @@
 
     move-result-object v1
 
-    const v2, 0x11200c3
+    const v2, #android:bool@config_zero_balance_operator#t
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 

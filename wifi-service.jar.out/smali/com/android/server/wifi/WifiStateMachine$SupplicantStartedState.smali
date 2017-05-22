@@ -84,15 +84,12 @@
 
     move-result-object v1
 
-    .line 6237
-    const v2, 0x10e0029
+    const v2, #android:integer@config_wifi_supplicant_scan_interval#t
 
-    .line 6236
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v0
 
-    .line 6239
     .local v0, "defaultInterval":I
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$SupplicantStartedState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 

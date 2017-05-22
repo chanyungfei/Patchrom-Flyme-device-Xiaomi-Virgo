@@ -3693,7 +3693,7 @@
 
     move-result-object v12
 
-    const v13, 0x107001e
+    const v13, #android:array@config_tether_apndata#t
 
     invoke-virtual {v12, v13}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -4373,22 +4373,17 @@
 
     move-result-object v1
 
-    .line 464
-    const v2, 0x10e00a7
+    const v2, #android:integer@config_mdc_initial_max_retry#t
 
-    .line 463
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v0
 
-    .line 468
     :cond_1
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->mResolver:Landroid/content/ContentResolver;
 
-    .line 469
-    const-string/jumbo v2, "mdc_initial_max_retry"
+    const-string v2, "mdc_initial_max_retry"
 
-    .line 468
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v1

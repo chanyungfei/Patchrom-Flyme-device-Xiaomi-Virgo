@@ -346,25 +346,20 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 82
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    .line 84
     .local v3, "resource":Landroid/content/res/Resources;
-    const v5, 0x1070042
+    const v5, #android:array@config_telephonyHardware#t
 
-    .line 83
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 85
     .local v2, "hwStrings":[Ljava/lang/String;
     if-eqz v2, :cond_2
 
-    .line 86
     array-length v5, v2
 
     :goto_0

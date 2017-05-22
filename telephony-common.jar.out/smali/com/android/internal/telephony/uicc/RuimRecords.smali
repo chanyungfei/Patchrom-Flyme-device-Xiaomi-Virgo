@@ -2254,7 +2254,7 @@
 
     .line 804
     .local v1, "resource":Landroid/content/res/Resources;
-    const v3, 0x11200ab
+    const v3, #android:bool@config_use_sim_language_file#t
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 

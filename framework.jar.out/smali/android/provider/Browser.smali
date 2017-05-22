@@ -687,8 +687,7 @@
     .param p1, "string"    # Ljava/lang/String;
 
     .prologue
-    .line 208
-    const v0, 0x1040407
+    const v0, #android:string@sendText#t
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

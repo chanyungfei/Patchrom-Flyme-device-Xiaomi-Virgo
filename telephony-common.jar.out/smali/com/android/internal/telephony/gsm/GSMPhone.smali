@@ -1597,7 +1597,7 @@
 
     move-result-object v3
 
-    const v4, 0x10400cf
+    const v4, #android:string@prohibit_manual_network_selection_in_gobal_mode#t
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2881,42 +2881,34 @@
 
     const/4 v3, 0x0
 
-    .line 833
     .local v3, "imsUseEnabled":Z
     :goto_0
     if-eqz v2, :cond_6
 
     if-eqz v4, :cond_6
 
-    .line 835
     iget-object v8, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
-    .line 836
-    const v9, 0x1120096
+    const v9, #android:bool@useImsAlwaysForEmergencyCall#t
 
-    .line 835
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v8
 
-    .line 833
     if-eqz v8, :cond_6
 
-    .line 837
     iget-object v8, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mContext:Landroid/content/Context;
 
     invoke-static {v8}, Lcom/android/ims/ImsManager;->isNonTtyOrTtyOnVolteEnabled(Landroid/content/Context;)Z
 
     move-result v8
 
-    .line 833
     if-eqz v8, :cond_6
 
-    .line 838
     invoke-virtual {v2}, Lcom/android/internal/telephony/imsphone/ImsPhone;->getServiceState()Landroid/telephony/ServiceState;
 
     move-result-object v8
@@ -5299,14 +5291,11 @@
 
     if-nez v2, :cond_2
 
-    .line 1068
     :cond_0
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mContext:Landroid/content/Context;
 
-    .line 1069
-    const v3, 0x1040004
+    const v3, #android:string@defaultVoiceMailAlphaTag#t
 
-    .line 1068
     invoke-virtual {v2, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v2
@@ -5421,15 +5410,12 @@
 
     move-result-object v6
 
-    .line 1026
-    const v7, 0x1070046
+    const v7, #android:array@config_default_vm_number#t
 
-    .line 1025
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1027
     .local v2, "listArray":[Ljava/lang/String;
     if-eqz v2, :cond_4
 

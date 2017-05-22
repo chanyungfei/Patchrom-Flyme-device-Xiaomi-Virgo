@@ -14,22 +14,18 @@
     .locals 3
 
     .prologue
-    .line 31
     const/4 v0, 0x1
 
     new-array v0, v0, [I
 
-    .line 32
-    const v1, 0x101030b
+    const v1, #android:attr@homeAsUpIndicator#t
 
     const/4 v2, 0x0
 
     aput v1, v0, v2
 
-    .line 31
     sput-object v0, Landroid/support/v4/app/ActionBarDrawerToggleJellybeanMR2;->THEME_ATTRS:[I
 
-    .line 28
     return-void
 .end method
 
@@ -52,47 +48,37 @@
 
     const/4 v6, 0x0
 
-    .line 55
     invoke-virtual {p0}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v1
 
-    .line 57
     .local v1, "actionBar":Landroid/app/ActionBar;
     if-eqz v1, :cond_0
 
-    .line 58
     invoke-virtual {v1}, Landroid/app/ActionBar;->getThemedContext()Landroid/content/Context;
 
     move-result-object v2
 
-    .line 63
     .local v2, "context":Landroid/content/Context;
     :goto_0
     sget-object v4, Landroid/support/v4/app/ActionBarDrawerToggleJellybeanMR2;->THEME_ATTRS:[I
 
-    .line 64
-    const v5, 0x10102ce
+    const v5, #android:attr@actionBarStyle#t
 
-    .line 63
     invoke-virtual {v2, v7, v4, v5, v6}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 65
     .local v0, "a":Landroid/content/res/TypedArray;
     invoke-virtual {v0, v6}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
-    .line 66
     .local v3, "result":Landroid/graphics/drawable/Drawable;
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 67
     return-object v3
 
-    .line 60
     .end local v0    # "a":Landroid/content/res/TypedArray;
     .end local v2    # "context":Landroid/content/Context;
     .end local v3    # "result":Landroid/graphics/drawable/Drawable;

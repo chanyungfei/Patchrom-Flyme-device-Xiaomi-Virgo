@@ -1263,7 +1263,7 @@
 
     move-result-object v7
 
-    const v8, 0x11200bb
+    const v8, #android:bool@config_samsung_stk#t
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getBoolean(I)Z
 

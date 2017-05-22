@@ -65,67 +65,54 @@
 
     invoke-static {p1, v1}, Lcom/android/server/BatteryService;->-set7(Lcom/android/server/BatteryService;Z)Z
 
-    .line 1038
     const/4 v1, 0x5
 
-    .line 1037
     invoke-virtual {v0, v1}, Landroid/app/NotificationManager;->deviceLightsCan(I)Z
 
     move-result v1
 
     invoke-static {p1, v1}, Lcom/android/server/BatteryService;->-set0(Lcom/android/server/BatteryService;Z)Z
 
-    .line 1042
     const/4 v1, 0x2
 
-    .line 1041
     invoke-virtual {v0, v1}, Landroid/app/NotificationManager;->deviceLightsCan(I)Z
 
     move-result v1
 
     invoke-static {p1, v1}, Lcom/android/server/BatteryService;->-set9(Lcom/android/server/BatteryService;Z)Z
 
-    .line 1044
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 1045
-    const v2, 0x10e005b
+    const v2, #android:integer@config_notificationsBatteryLedOn#t
 
-    .line 1044
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/BatteryService$Led;->mBatteryLedOn:I
 
-    .line 1046
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 1047
-    const v2, 0x10e005c
+    const v2, #android:integer@config_notificationsBatteryLedOff#t
 
-    .line 1046
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/BatteryService$Led;->mBatteryLedOff:I
 
-    .line 1052
     const/4 v1, 0x4
 
-    .line 1051
     invoke-virtual {v0, v1}, Landroid/app/NotificationManager;->deviceLightsCan(I)Z
 
     move-result v1
 
     invoke-static {p1, v1}, Lcom/android/server/BatteryService;->-set11(Lcom/android/server/BatteryService;Z)Z
 
-    .line 1029
     return-void
 .end method
 

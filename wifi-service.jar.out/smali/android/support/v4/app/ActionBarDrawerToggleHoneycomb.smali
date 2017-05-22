@@ -22,22 +22,18 @@
     .locals 3
 
     .prologue
-    .line 44
     const/4 v0, 0x1
 
     new-array v0, v0, [I
 
-    .line 45
-    const v1, 0x101030b
+    const v1, #android:attr@homeAsUpIndicator#t
 
     const/4 v2, 0x0
 
     aput v1, v0, v2
 
-    .line 44
     sput-object v0, Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb;->THEME_ATTRS:[I
 
-    .line 41
     return-void
 .end method
 

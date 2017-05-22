@@ -73,30 +73,24 @@
 
     monitor-enter v6
 
-    .line 84
     :try_start_0
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 85
-    const v1, 0x107003c
+    const v1, #android:array@config_disabledUntilUsedPreinstalledCarrierApps#t
 
-    .line 84
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 86
     .local v4, "systemCarrierAppsDisabledUntilUsed":[Ljava/lang/String;
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 87
-    const v1, 0x1070010
+    const v1, #android:array@config_enabledPreinstalledCarrierApps#t
 
-    .line 86
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v5
@@ -562,34 +556,27 @@
     .end annotation
 
     .prologue
-    .line 223
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    .line 224
-    const v3, 0x107003c
+    const v3, #android:array@config_disabledUntilUsedPreinstalledCarrierApps#t
 
-    .line 223
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 225
     .local v0, "systemCarrierAppsDisabledUntilUsed":[Ljava/lang/String;
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    .line 226
-    const v3, 0x1070010
+    const v3, #android:array@config_enabledPreinstalledCarrierApps#t
 
-    .line 225
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 227
     .local v1, "systemCarrierAppsEnabled":[Ljava/lang/String;
     invoke-static {p0, p1, v0, v1}, Lcom/android/internal/telephony/CarrierAppUtils;->getDefaultCarrierAppCandidatesHelper(Landroid/content/pm/IPackageManager;I[Ljava/lang/String;[Ljava/lang/String;)Ljava/util/List;
 
@@ -828,25 +815,20 @@
 
     if-eqz v8, :cond_1
 
-    .line 182
     :cond_0
     return-object v9
 
-    .line 185
     :cond_1
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v8
 
-    .line 186
-    const v9, 0x1070010
+    const v9, #android:array@config_enabledPreinstalledCarrierApps#t
 
-    .line 185
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v6
 
-    .line 187
     .local v6, "systemCarrierAppsEnabled":[Ljava/lang/String;
     new-instance v2, Ljava/util/HashSet;
 

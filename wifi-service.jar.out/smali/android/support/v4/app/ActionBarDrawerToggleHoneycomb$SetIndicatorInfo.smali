@@ -91,7 +91,7 @@
 
     .line 117
     .local v1, "e":Ljava/lang/NoSuchMethodException;
-    const v7, 0x102002c
+    const v7, #android:id@home#t
 
     invoke-virtual {p1, v7}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
@@ -149,7 +149,7 @@
 
     move-result v7
 
-    const v8, 0x102002c
+    const v8, #android:id@home#t
 
     if-ne v7, v8, :cond_3
 

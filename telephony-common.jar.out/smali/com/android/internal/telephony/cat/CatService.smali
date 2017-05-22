@@ -3519,7 +3519,7 @@
 
     iget-object v2, v0, Lcom/android/internal/telephony/cat/CatService;->mContext:Landroid/content/Context;
 
-    const v3, 0x1040530
+    const v3, #android:string@launchBrowserDefault#t
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -3614,7 +3614,7 @@
 
     iget-object v2, v0, Lcom/android/internal/telephony/cat/CatService;->mContext:Landroid/content/Context;
 
-    const v3, 0x104052f
+    const v3, #android:string@sending#t
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -3674,7 +3674,7 @@
 
     iget-object v2, v0, Lcom/android/internal/telephony/cat/CatService;->mContext:Landroid/content/Context;
 
-    const v3, 0x1040531
+    const v3, #android:string@SetupCallDefault#t
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -3720,17 +3720,14 @@
 
     move-result-object v2
 
-    .line 502
-    const v3, 0x112008f
+    const v3, #android:bool@config_stkNoAlphaUsrCnf#t
 
-    .line 501
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
     :try_end_0
     .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v21
 
-    .line 506
     .end local v21    # "noAlphaUsrCnf":Z
     :goto_5
     move-object/from16 v0, v17
@@ -5550,30 +5547,25 @@
 
     move-result-object v0
 
-    .line 921
-    const v1, 0x11200bb
+    const v1, #android:bool@config_samsung_stk#t
 
-    .line 920
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 924
-    const-string/jumbo v0, "handleMsg : MSG_ID_SEND_SMS_RESULT"
+    const-string v0, "handleMsg : MSG_ID_SEND_SMS_RESULT"
 
     invoke-static {p0, v0}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 925
     invoke-direct {p0}, Lcom/android/internal/telephony/cat/CatService;->cancelTimeOut()V
 
-    .line 926
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "The Msg ID data:"
+    const-string v1, "The Msg ID data:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

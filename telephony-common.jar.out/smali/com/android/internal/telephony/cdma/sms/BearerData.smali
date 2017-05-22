@@ -5531,27 +5531,22 @@
 
     throw v6
 
-    .line 1193
     :pswitch_1
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v6
 
-    .line 1194
-    const v7, 0x112006f
+    const v7, #android:bool@config_sms_utf8_support#t
 
-    .line 1193
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v1
 
-    .line 1199
     .local v1, "decodingtypeUTF8":Z
     iget v6, p0, Lcom/android/internal/telephony/cdma/sms/UserData;->numFields:I
 
     new-array v4, v6, [B
 
-    .line 1200
     .local v4, "payload":[B
     iget v6, p0, Lcom/android/internal/telephony/cdma/sms/UserData;->numFields:I
 

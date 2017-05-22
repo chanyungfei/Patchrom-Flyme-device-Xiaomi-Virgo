@@ -196,18 +196,14 @@
 
     const/4 v3, 0x0
 
-    .line 173
     new-array v1, v2, [I
 
-    .line 174
-    const v4, 0x10100b3
+    const v4, #android:attr@layout_gravity#t
 
     aput v4, v1, v3
 
-    .line 173
     sput-object v1, Landroid/support/v4/widget/DrawerLayout;->LAYOUT_ATTRS:[I
 
-    .line 178
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v4, 0x13

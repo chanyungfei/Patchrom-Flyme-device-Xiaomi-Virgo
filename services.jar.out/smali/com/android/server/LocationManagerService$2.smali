@@ -53,10 +53,8 @@
 
     move-result-object v0
 
-    .line 261
-    const v1, 0x107002f
+    const v1, #android:array@config_locationProviderPackageNames#t
 
-    .line 260
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v0

@@ -32,6 +32,8 @@
 .field uid:I
 
 .field visibility:I
+.field mFlymeHeadsUp:I
+.field mFlymeRemind:Z
 
 
 # direct methods
@@ -54,36 +56,36 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 503
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 507
     sget v0, Lcom/android/server/notification/RankingHelper$Record;->UNKNOWN_UID:I
 
     iput v0, p0, Lcom/android/server/notification/RankingHelper$Record;->uid:I
 
-    .line 508
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/notification/RankingHelper$Record;->priority:I
 
-    .line 509
     iput-boolean v1, p0, Lcom/android/server/notification/RankingHelper$Record;->peekable:Z
 
-    .line 510
     const/16 v0, -0x3e8
 
     iput v0, p0, Lcom/android/server/notification/RankingHelper$Record;->visibility:I
 
-    .line 511
     iput v1, p0, Lcom/android/server/notification/RankingHelper$Record;->keyguard:I
 
-    .line 512
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/notification/RankingHelper$Record;->notificationSoundTimeout:J
 
-    .line 503
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/android/server/notification/RankingHelper$Record;->mFlymeHeadsUp:I
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/android/server/notification/RankingHelper$Record;->mFlymeRemind:Z
+
     return-void
 .end method
 

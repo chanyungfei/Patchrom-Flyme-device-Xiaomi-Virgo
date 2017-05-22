@@ -33,22 +33,18 @@
     .locals 3
 
     .prologue
-    .line 1395
     const/4 v0, 0x1
 
     new-array v0, v0, [I
 
-    .line 1396
-    const v1, 0x1010181
+    const v1, #android:attr@layout_weight#t
 
     const/4 v2, 0x0
 
     aput v1, v0, v2
 
-    .line 1395
     sput-object v0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->ATTRS:[I
 
-    .line 1394
     return-void
 .end method
 

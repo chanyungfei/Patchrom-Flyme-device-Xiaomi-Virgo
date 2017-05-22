@@ -867,20 +867,16 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 116
     :cond_0
-    const v0, 0x1030059
+    const v0, #android:style@Theme.Panel#t
 
     iput v0, p0, Landroid/support/v4/app/DialogFragment;->mTheme:I
 
-    .line 118
     :cond_1
     if-eqz p2, :cond_2
 
-    .line 119
     iput p2, p0, Landroid/support/v4/app/DialogFragment;->mTheme:I
 
-    .line 113
     :cond_2
     return-void
 .end method

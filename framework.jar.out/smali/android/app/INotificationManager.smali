@@ -78,7 +78,6 @@
         }
     .end annotation
 .end method
-
 .method public abstract enqueueNotificationWithTag(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILandroid/app/Notification;[II)V
     .annotation system Ldalvik/annotation/Throws;
         value = {

@@ -249,48 +249,38 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher;->mSettingsObserver:Lcom/android/internal/telephony/SMSDispatcher$SettingsObserver;
 
-    .line 196
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 197
-    const-string/jumbo v3, "sms_short_code_rule"
+    const-string v3, "sms_short_code_rule"
 
-    .line 196
     invoke-static {v3}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v3
 
-    .line 197
     iget-object v4, p0, Lcom/android/internal/telephony/SMSDispatcher;->mSettingsObserver:Lcom/android/internal/telephony/SMSDispatcher$SettingsObserver;
 
-    .line 196
     invoke-virtual {v0, v3, v1, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 199
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 200
-    const v3, 0x1120068
+    const v3, #android:bool@config_sms_capable#t
 
-    .line 199
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/SMSDispatcher;->mSmsCapable:Z
 
-    .line 201
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    .line 202
     iget-object v3, p0, Lcom/android/internal/telephony/SMSDispatcher;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     invoke-virtual {v3}, Lcom/android/internal/telephony/PhoneBase;->getPhoneId()I
@@ -2145,17 +2135,13 @@
 
     if-eqz v14, :cond_0
 
-    .line 1242
     return-void
 
-    .line 1246
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 1247
-    const v4, 0x104043b
+    const v4, #android:string@sms_premium_short_code_details#t
 
-    .line 1252
     .local v4, "detailsId":I
     :goto_0
     move-object/from16 v0, p2
@@ -2195,8 +2181,7 @@
 
     aput-object v15, v14, v16
 
-    .line 1254
-    const v15, 0x1040439
+    const v15, #android:string@sms_short_code_confirm_message#t
 
     invoke-virtual {v12, v15, v14}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -2224,7 +2209,7 @@
 
     .line 1259
     .local v7, "inflater":Landroid/view/LayoutInflater;
-    const v14, 0x10900e0
+    const v14, #android:layout@sms_short_code_confirmation_dialog#t
 
     const/4 v15, 0x0
 
@@ -2232,12 +2217,10 @@
 
     move-result-object v8
 
-    .line 1261
     .local v8, "layout":Landroid/view/View;
     new-instance v9, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;
 
-    .line 1262
-    const v14, 0x10203d6
+    const v14, #android:id@sms_short_code_remember_undo_instruction#t
 
     invoke-virtual {v8, v14}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2254,7 +2237,7 @@
 
     .line 1265
     .local v9, "listener":Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;
-    const v14, 0x10203d0
+    const v14, #android:id@sms_short_code_confirm_message#t
 
     invoke-virtual {v8, v14}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2262,50 +2245,40 @@
 
     check-cast v11, Landroid/widget/TextView;
 
-    .line 1266
     .local v11, "messageView":Landroid/widget/TextView;
     invoke-virtual {v11, v10}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1269
-    const v14, 0x10203d1
+    const v14, #android:id@sms_short_code_detail_layout#t
 
-    .line 1268
     invoke-virtual {v8, v14}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
     check-cast v5, Landroid/view/ViewGroup;
 
-    .line 1271
     .local v5, "detailsLayout":Landroid/view/ViewGroup;
-    const v14, 0x10203d3
+    const v14, #android:id@sms_short_code_detail_message#t
 
-    .line 1270
     invoke-virtual {v5, v14}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v6
 
     check-cast v6, Landroid/widget/TextView;
 
-    .line 1272
     .local v6, "detailsView":Landroid/widget/TextView;
     invoke-virtual {v6, v4}, Landroid/widget/TextView;->setText(I)V
 
-    .line 1275
-    const v14, 0x10203d4
+    const v14, #android:id@sms_short_code_remember_choice_checkbox#t
 
-    .line 1274
     invoke-virtual {v8, v14}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v13
 
     check-cast v13, Landroid/widget/CheckBox;
 
-    .line 1276
     .local v13, "rememberChoice":Landroid/widget/CheckBox;
     invoke-virtual {v13, v9}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    .line 1278
     new-instance v14, Landroid/app/AlertDialog$Builder;
 
     move-object/from16 v0, p0
@@ -2318,26 +2291,22 @@
 
     move-result-object v14
 
-    .line 1280
-    const v15, 0x104043c
+    const v15, #android:string@sms_short_code_confirm_allow#t
 
     invoke-virtual {v12, v15}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v15
 
-    .line 1278
     invoke-virtual {v14, v15, v9}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v14
 
-    .line 1281
-    const v15, 0x104043d
+    const v15, #android:string@sms_short_code_confirm_deny#t
 
     invoke-virtual {v12, v15}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v15
 
-    .line 1278
     invoke-virtual {v14, v15, v9}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v14
@@ -2398,7 +2367,7 @@
     .end local v12    # "r":Landroid/content/res/Resources;
     .end local v13    # "rememberChoice":Landroid/widget/CheckBox;
     :cond_1
-    const v4, 0x104043a
+    const v4, #android:string@sms_short_code_details#t
 
     .restart local v4    # "detailsId":I
     goto/16 :goto_0
@@ -2644,7 +2613,7 @@
 
     aput-object v0, v5, v6
 
-    const v6, 0x1040436
+    const v6, #android:string@sms_control_message#t
 
     invoke-virtual {v4, v6, v5}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -2670,18 +2639,14 @@
 
     invoke-direct {v5, v6}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1223
-    const v6, 0x1040435
+    const v6, #android:string@sms_control_title#t
 
-    .line 1222
     invoke-virtual {v5, v6}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v5
 
-    .line 1224
-    const v6, 0x108008a
+    const v6, #android:drawable@stat_sys_warning#t
 
-    .line 1222
     invoke-virtual {v5, v6}, Landroid/app/AlertDialog$Builder;->setIcon(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v5
@@ -2690,26 +2655,22 @@
 
     move-result-object v5
 
-    .line 1226
-    const v6, 0x1040437
+    const v6, #android:string@sms_control_yes#t
 
     invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 1222
     invoke-virtual {v5, v6, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v5
 
-    .line 1227
-    const v6, 0x1040438
+    const v6, #android:string@sms_control_no#t
 
     invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 1222
     invoke-virtual {v5, v6, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v5

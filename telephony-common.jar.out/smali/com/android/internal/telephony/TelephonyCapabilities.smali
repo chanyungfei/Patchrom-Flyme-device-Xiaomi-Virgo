@@ -51,12 +51,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 106
-    const v0, 0x1040114
+    const v0, #android:string@imei#t
 
     return v0
 
-    .line 107
     :cond_0
     invoke-interface {p0}, Lcom/android/internal/telephony/Phone;->getPhoneType()I
 
@@ -66,31 +64,27 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 108
-    const v0, 0x1040115
+    const v0, #android:string@meid#t
 
     return v0
 
-    .line 110
     :cond_1
-    const-string/jumbo v0, "TelephonyCapabilities"
+    const-string v0, "TelephonyCapabilities"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "getDeviceIdLabel: no known label for phone "
+    const-string v2, "getDeviceIdLabel: no known label for phone "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 111
     invoke-interface {p0}, Lcom/android/internal/telephony/Phone;->getPhoneName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 110
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1

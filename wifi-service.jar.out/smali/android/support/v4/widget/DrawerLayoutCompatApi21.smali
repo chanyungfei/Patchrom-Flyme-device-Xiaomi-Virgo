@@ -20,22 +20,18 @@
     .locals 3
 
     .prologue
-    .line 33
     const/4 v0, 0x1
 
     new-array v0, v0, [I
 
-    .line 34
-    const v1, 0x1010434
+    const v1, #android:attr@colorPrimaryDark#t
 
     const/4 v2, 0x0
 
     aput v1, v0, v2
 
-    .line 33
     sput-object v0, Landroid/support/v4/widget/DrawerLayoutCompatApi21;->THEME_ATTRS:[I
 
-    .line 31
     return-void
 .end method
 

@@ -441,25 +441,21 @@
 
     move-result-object v0
 
-    .line 287
-    const v1, 0x10e009b
+    const v1, #android:integer@config_cdma_3waycall_flash_delay#t
 
-    .line 286
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/telephony/cdma/CdmaCallTracker;->m3WayCallFlashDelay:I
 
-    .line 288
     iget v0, p0, Lcom/android/internal/telephony/cdma/CdmaCallTracker;->m3WayCallFlashDelay:I
 
     if-lez v0, :cond_0
 
-    .line 289
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CdmaCallTracker;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
-    const-string/jumbo v1, ""
+    const-string v1, ""
 
     const/16 v2, 0x14
 

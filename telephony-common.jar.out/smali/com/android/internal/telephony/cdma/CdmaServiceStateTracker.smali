@@ -978,19 +978,15 @@
 
     move-result-object v2
 
-    .line 1577
-    const v4, 0x1070043
+    const v4, #android:array@config_cdma_home_system#t
 
-    .line 1576
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1579
     .local v1, "homeRoamIndicators":[Ljava/lang/String;
     if-eqz v1, :cond_2
 
-    .line 1582
     array-length v4, v1
 
     move v2, v3
@@ -10309,10 +10305,8 @@
 
     move-result-object v29
 
-    .line 1298
-    const v30, 0x104014d
+    const v30, #android:string@roamingTextSearching#t
 
-    .line 1297
     invoke-virtual/range {v29 .. v30}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v29
@@ -10999,15 +10993,12 @@
 
     move-result-object v6
 
-    .line 965
-    const v7, 0x107004b
+    const v7, #android:array@config_cdma_international_roaming_indicators#t
 
-    .line 964
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getIntArray(I)[I
 
     move-result-object v3
 
-    .line 966
     .local v3, "intRoamingIndicators":[I
     if-eqz v3, :cond_4
 
@@ -11650,7 +11641,7 @@
 
     move-result-object v0
 
-    const v1, 0x10402eb
+    const v1, #android:string@lockscreen_carrier_default#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 

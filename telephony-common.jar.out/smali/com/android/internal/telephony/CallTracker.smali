@@ -416,48 +416,39 @@
 
     move-result-object v7
 
-    .line 205
-    const v8, 0x1070047
+    const v8, #android:array@dial_string_replace#t
 
-    .line 204
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 206
     .local v1, "convertMaps":[Ljava/lang/String;
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "convertNumberIfNecessary Roaming convertMaps.length "
+    const-string v8, "convertNumberIfNecessary Roaming convertMaps.length "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v7
 
-    .line 207
     array-length v8, v1
 
-    .line 206
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v7
 
-    .line 208
-    const-string/jumbo v8, " dialNumber.length() "
+    const-string v8, " dialNumber.length() "
 
-    .line 206
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v7
 
-    .line 208
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v8
 
-    .line 206
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v7

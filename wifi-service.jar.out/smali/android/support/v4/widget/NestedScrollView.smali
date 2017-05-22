@@ -99,29 +99,24 @@
     .locals 3
 
     .prologue
-    .line 168
     new-instance v0, Landroid/support/v4/widget/NestedScrollView$AccessibilityDelegate;
 
     invoke-direct {v0}, Landroid/support/v4/widget/NestedScrollView$AccessibilityDelegate;-><init>()V
 
     sput-object v0, Landroid/support/v4/widget/NestedScrollView;->ACCESSIBILITY_DELEGATE:Landroid/support/v4/widget/NestedScrollView$AccessibilityDelegate;
 
-    .line 170
     const/4 v0, 0x1
 
     new-array v0, v0, [I
 
-    .line 171
-    const v1, 0x101017a
+    const v1, #android:attr@fillViewport#t
 
     const/4 v2, 0x0
 
     aput v1, v0, v2
 
-    .line 170
     sput-object v0, Landroid/support/v4/widget/NestedScrollView;->SCROLLVIEW_STYLEABLE:[I
 
-    .line 64
     return-void
 .end method
 
@@ -803,47 +798,38 @@
 
     if-nez v2, :cond_1
 
-    .line 928
     new-instance v1, Landroid/util/TypedValue;
 
     invoke-direct {v1}, Landroid/util/TypedValue;-><init>()V
 
-    .line 929
     .local v1, "outValue":Landroid/util/TypedValue;
     invoke-virtual {p0}, Landroid/support/v4/widget/NestedScrollView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 930
     .local v0, "context":Landroid/content/Context;
     invoke-virtual {v0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v2
 
-    .line 931
-    const v3, 0x101004d
+    const v3, #android:attr@listPreferredItemHeight#t
 
     const/4 v4, 0x1
 
-    .line 930
     invoke-virtual {v2, v3, v1, v4}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 932
     new-instance v2, Ljava/lang/IllegalStateException;
 
-    .line 933
-    const-string/jumbo v3, "Expected theme to define listPreferredItemHeight."
+    const-string v3, "Expected theme to define listPreferredItemHeight."
 
-    .line 932
     invoke-direct {v2, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 936
     :cond_0
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
