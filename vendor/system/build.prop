@@ -19,7 +19,7 @@ ro.build.host=guaiyihu-PC
 ro.build.tags=test-keys
 ro.build.flavor=lineage_virgo-userdebug
 ro.product.brand=Xiaomi
-ro.product.name=lineage_virgo
+ro.product.name=virgo
 ro.product.board=MSM8974
 # ro.product.cpu.abi and ro.product.cpu.abi2 are obsolete,
 # use ro.product.cpu.abilist instead.
@@ -34,7 +34,7 @@ ro.wifi.channels=
 ro.board.platform=msm8974
 # ro.build.product is obsolete; use ro.product.device
 ro.build.product=virgo
-ro.product.model=MI Note LTE
+ro.product.model=MI NOTE LTE
 ro.product.device=virgo
 # Do not try to parse description, fingerprint, or thumbprint
 ro.build.description=lineage_virgo-userdebug 6.0.1 MOB31T f36d3451df test-keys
